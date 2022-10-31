@@ -39,10 +39,18 @@
 	.redirect:hover {background: #303136;}
 }
 .center {
-  margin: auto;
-  width: 60%;
-  padding: 10px;
+	margin: auto;
+	width: 60%;
+	padding: 10px;
+	text-align: center;
+}
+.bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   text-align: center;
+  line-height: 0;
 }
 </style>
 </head>
@@ -54,7 +62,18 @@ function openRedirect() {
 </script>
 <div class="center">
 	<h1>Simple Twitch VLC Launcher</h1>
-	<button class="redirect" type="button" onclick="openRedirect();">REDIRECT</button>
+	</br>
+	<p>Click button below in order to proceed with authentication.</p>
+	</br>
+	<button class="redirect" type="button" onclick="openRedirect()">BACK TO APP</button>
+</div>
+<div class="bottom">
+	<p>Why you ended up on this page?</p>
+	</br>
+	<p><i>On Windows in order to open application from browser,</i></p>
+	<p><i>or send some info, URI should start with scheme other than HTTPS,</i></p>
+	<p><i>but Twitch doesn't let developers to set custom schemes in redirect URL.</i></p>
+	<p><i>This page is just a mediator between the App and the Twitch Auth.</i></p>
 </div>
 </body>
 </html>
